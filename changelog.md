@@ -3,6 +3,19 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versionnage
 [SemVer](https://semver.org/lang/fr/).
 
+## [1.1.0] 2026-08-02
+
+### Ajouté
+- Modale « ℹ️ Infos » (bouton dans la barre de l'écran d'accueil, avec Boutique et Succès)
+  expliquant la stack, les graphismes, la musique (gamme et timbre propres à chaque biome),
+  les interactions, l'architecture et les algorithmes notables (rotation de biome tous les
+  12 points, météo animée par biome). Étape 15 du chantier de retrofit décrit dans
+  `todo.md` racine du monorepo.
+
+### Vérifié
+- Build propre, modale testée à l'ouverture/fermeture, aucune erreur console, aucun
+  débordement horizontal en 390×844.
+
 ## [1.0.0] 2026-08-01
 
 Première version intégrable à Hylst.Games, partie d'un export brut audité puis corrigé.

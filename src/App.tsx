@@ -117,7 +117,7 @@ export default function App() {
   // === UI State ===
   const [gameState, setGameState] = useState<"menu" | "playing" | "gameover">("menu");
   const [gameMode, setGameMode] = useState<GameMode>("progressive");
-  const [activeModal, setActiveModal] = useState<"none" | "shop" | "achievements">("none");
+  const [activeModal, setActiveModal] = useState<"none" | "shop" | "achievements" | "info">("none");
   const [score, setScore] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -947,7 +947,7 @@ export default function App() {
                 </div>
                 <div className="mt-3 text-amber-300/90 text-[11px] font-medium">💡 La difficulté grimpe doucement avec votre score !</div>
               </div>
-              <div className="w-full flex items-center justify-center gap-3 mb-1 pointer-events-auto">
+              <div className="w-full flex flex-wrap items-center justify-center gap-3 mb-1 pointer-events-auto">
                 <button onPointerDown={(e) => { e.stopPropagation(); setActiveModal("shop"); audioController.playFlap(); }}
                   className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-black px-4 py-2.5 rounded-2xl shadow-xl border border-amber-300/30 transition-transform active:scale-95">
                   <span>🛍️</span><span className="text-xs uppercase tracking-wider">Boutique</span>
@@ -956,6 +956,11 @@ export default function App() {
                   className="relative flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black px-4 py-2.5 rounded-2xl shadow-xl border border-blue-400/30 transition-transform active:scale-95">
                   <span>🏆</span><span className="text-xs uppercase tracking-wider">Succès</span>
                   {completedCount > 0 && <span className="absolute -top-1.5 -right-1.5 bg-amber-400 text-slate-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow">{completedCount}</span>}
+                </button>
+                <button onPointerDown={(e) => { e.stopPropagation(); setActiveModal("info"); audioController.playFlap(); }}
+                  title="Comment ce jeu a été fait"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-black px-4 py-2.5 rounded-2xl shadow-xl border border-white/20 transition-transform active:scale-95">
+                  <span>ℹ️</span><span className="text-xs uppercase tracking-wider hidden sm:inline">Infos</span>
                 </button>
               </div>
             </div>
@@ -1065,6 +1070,26 @@ export default function App() {
               </div>
             </div>
             <button onClick={() => setActiveModal("none")} className="w-full mt-4 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-black text-xs rounded-2xl uppercase tracking-wider shadow-lg border border-white/10">Fermer</button>
+          </div>
+        </div>
+      )}
+
+      {/* Modal Infos */}
+      {activeModal === "info" && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fade-in" onPointerDown={() => setActiveModal("none")}>
+          <div className="bg-slate-900 border-2 border-white/20 rounded-3xl p-6 max-w-sm w-full max-h-[85vh] overflow-y-auto shadow-2xl" onPointerDown={(e) => e.stopPropagation()}>
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-white/10">
+              <span className="text-2xl">ℹ️</span><h2 className="text-xl font-black text-white">Comment ce jeu a été fait</h2>
+            </div>
+            <div className="space-y-3.5 text-sm leading-relaxed text-white/80">
+              <p><strong className="text-white">Stack :</strong> React 19, TypeScript 5.9, Tailwind CSS 4, Vite 7, compilé en un seul fichier HTML, aucune dépendance chargée depuis l'extérieur.</p>
+              <p><strong className="text-white">Graphismes :</strong> tout est dessiné en Canvas 2D à chaque image (oiseau, obstacles, météo, décor de biome), aucun sprite ni image externe.</p>
+              <p><strong className="text-white">Musique &amp; sons :</strong> synthétisés en direct avec l'API Web Audio. Chaque biome a sa propre gamme musicale et son propre timbre d'oscillateur, donc la musique change vraiment de couleur en changeant de décor.</p>
+              <p><strong className="text-white">Interactions :</strong> clic, tactile ou espace pour battre des ailes, boutons dédiés pour la boutique de skins/chapeaux et les succès.</p>
+              <p><strong className="text-white">Architecture :</strong> une seule boucle de jeu Canvas met à jour la physique et redessine chaque image ; progression, pièces et succès débloqués sont persistés dans le stockage local du navigateur.</p>
+              <p><strong className="text-white">Algorithmes notables :</strong> le biome traversé change automatiquement tous les 12 points de score en mode Biomes évolutifs, chacun avec sa propre météo animée (pluie, neige, pétales, lucioles...). Le mode Vitesse extrême applique un multiplicateur de vitesse aux obstacles par rapport au mode normal.</p>
+            </div>
+            <button onClick={() => setActiveModal("none")} className="w-full mt-5 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-black text-xs rounded-2xl uppercase tracking-wider shadow-lg border border-white/10">Fermer</button>
           </div>
         </div>
       )}
