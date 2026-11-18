@@ -30,5 +30,5 @@ au pied de la lettre : la moindre pause, et c'est le crash.
 
 ## Contact
 
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : [games.hylst.fr](https://games.hylst.fr/)
