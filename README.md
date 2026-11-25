@@ -67,4 +67,4 @@ Zéro sprite : tout est dessiné en Canvas 2D, les sons sont synthétisés au vo
 
 ## Licence
 
-MIT, Geoffroy Streit (Hylst)
+AGPL-3.0-or-later, Geoffroy Streit (Hylst). Voir `LICENSE`.
