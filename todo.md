@@ -86,3 +86,8 @@ identique avant/après son ajout puis son retrait).
 - [ ] Le bouclier protège aussi d'une chute au sol (rebond au lieu de game over), alors
   qu'il ne devrait normalement protéger que des tuyaux d'après son intitulé. Même
   comportement que Piaf, jamais documenté dans le jeu : pas tranché, laissé tel quel.
+
+## Audit du 27/11/2026
+
+- [ ] Rendre le succès « Globe-Trotter » atteignable en Zen et Hardcore, ou le documenter comme réservé au mode Progressif.
+- [ ] Traduire les deux chaînes anglaises dormantes de `src/App.tsx`.

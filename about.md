@@ -7,7 +7,7 @@ par **Geoffroy Streit** (alias **Hylst**).
 
 Le principe est connu : l'oiseau tombe tout seul, un appui fait battre ses ailes, et des
 tuyaux défilent qu'il faut éviter en passant par le trou. Ici, la partie ne fait jamais
-escale nulle part : dix biomes s'enchaînent (prairie, crépuscule, plage, forêt, canyon,
+escale nulle part : dix biomes s'enchaînent en mode Progressif (prairie, crépuscule, plage, forêt, canyon,
 cyberpunk, volcan, arctique, nuit, cosmos), chacun avec sa météo et sa musique.
 
 Trois modes de jeu (Progressif, Zen, Hardcore), une boutique de skins et de chapeaux à

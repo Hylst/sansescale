@@ -946,6 +946,7 @@ export default function App() {
                   <span className="bg-white/15 px-2 py-1 rounded font-mono font-bold text-white">Clic</span><span>pour voler</span>
                 </div>
                 <div className="mt-3 text-amber-300/90 text-[11px] font-medium">💡 La difficulté grimpe doucement avec votre score !</div>
+                <div className="mt-2 text-[10px] text-white/50">Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA.</div>
               </div>
               <div className="w-full flex flex-wrap items-center justify-center gap-3 mb-1 pointer-events-auto">
                 <button onPointerDown={(e) => { e.stopPropagation(); setActiveModal("shop"); audioController.playFlap(); }}
@@ -1083,6 +1084,7 @@ export default function App() {
             </div>
             <div className="space-y-3.5 text-sm leading-relaxed text-white/80">
               <p><strong className="text-white">Stack :</strong> React 19, TypeScript 5.9, Tailwind CSS 4, Vite 7, compilé en un seul fichier HTML, aucune dépendance chargée depuis l'extérieur.</p>
+              <p><strong className="text-white">Création :</strong> Geoffroy Streit (Hylst), avec l'aide d'une IA.</p>
               <p><strong className="text-white">Graphismes :</strong> tout est dessiné en Canvas 2D à chaque image (oiseau, obstacles, météo, décor de biome), aucun sprite ni image externe.</p>
               <p><strong className="text-white">Musique &amp; sons :</strong> synthétisés en direct avec l'API Web Audio. Chaque biome a sa propre gamme musicale et son propre timbre d'oscillateur, donc la musique change vraiment de couleur en changeant de décor.</p>
               <p><strong className="text-white">Interactions :</strong> clic, tactile ou espace pour battre des ailes, boutons dédiés pour la boutique de skins/chapeaux et les succès.</p>

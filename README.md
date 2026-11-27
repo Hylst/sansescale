@@ -1,6 +1,6 @@
 # Sans Escale
 
-**Vol direct, sans retour. Dix biomes, zéro pause.**
+**Vol direct, sans retour. Dix biomes en mode Progressif, zéro pause.**
 
 Joue ici : [games.hylst.fr/sansescale/](https://games.hylst.fr/sansescale/)
 
@@ -10,7 +10,7 @@ Joue ici : [games.hylst.fr/sansescale/](https://games.hylst.fr/sansescale/)
 
 L'oiseau tombe en continu, un appui le fait remonter d'un battement d'aile. Il faut
 enchaîner les tuyaux sans les toucher : chaque tuyau franchi rapporte un point. Des pièces,
-des boucliers et des ralentis flottent au fil du vol. Le score fait défiler dix biomes
+des boucliers et des ralentis flottent au fil du vol. Le score fait défiler dix biomes en mode Progressif
 différents (un tous les 12 points en mode Progressif), chacun avec sa météo et sa musique.
 
 ## Contrôles
